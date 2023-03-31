@@ -30,6 +30,7 @@ export default function Login() {
   const router = useRouter();
 
   return (
+    <main>
     <div className="flex items-center justify-center h-screen">
       <div className="bg-gray-200 p-6 rounded-lg">
         <form className="container flex flex-wrap flex-row">
@@ -55,12 +56,17 @@ export default function Login() {
           </div>
           <div className="lg:w-full mt-2">
             <ButtonForm type="button" onClick={formik.handleSubmit}>
-              <FontAwesomeIcon size="1x" icon={faRightToBracket} className="mr-1" />
+              <FontAwesomeIcon
+                size="1x"
+                icon={faRightToBracket}
+                className="mr-1"
+              />
               <b>Entrar</b>
             </ButtonForm>
           </div>
         </form>
       </div>
     </div>
+    </main>
   );
 }

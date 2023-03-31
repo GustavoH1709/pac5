@@ -7,7 +7,7 @@ export function TextInput({
   value = "",
 }) {
   return (
-    <div className="my-4">
+    <>
       <label className="block text-gray-700 font-bold mb-2" htmlFor={label}>
         {label}
       </label>
@@ -19,7 +19,7 @@ export function TextInput({
         onChange={onChange}
       />
       {invalid && <p className="text-red-600">{invalid}</p>}
-    </div>
+    </>
   );
 }
 
