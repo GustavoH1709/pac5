@@ -21,6 +21,14 @@ const _routes = {
         {
           name: "nf",
         },
+        {
+          name: 'Cadastro',
+          items: [
+            {
+              name: 'AAAA'
+            }
+          ]
+        }
       ],
     },
     {
@@ -40,9 +48,9 @@ function DynamicSidebarRoutingBuilder({ routing, setShow }: any) {
         if ("items" in m) {
           return (
             <Collapsible
-              className="flex flex-col border-solid border-y-2 border-t-gray-200 border-b-0 font-light hover:bg-gray-100"
-              openedClassName="flex flex-col border-solid border-y-2 border-t-gray-200 border-b-0 font-light"
-              triggerOpenedClassName="hover:bg-gray-100"
+              className="flex flex-col border-solid p-3 border-y-2 border-t-gray-200 border-b-0 font-light"
+              openedClassName="flex flex-col p-3 border-solid border-y-2 border-t-gray-200 border-b-0 font-light"
+              contentInnerClassName="p-3"
               key={useId()}
               trigger={<div className="flex justify-between"><b>{m.name}</b><FontAwesomeIcon  className="mr-3 mt-1 text-gray-400" icon={open ? faAngleUp : faAngleDown} /></div>}
               onTriggerOpening={() => setOpen(true)}
@@ -54,7 +62,7 @@ function DynamicSidebarRoutingBuilder({ routing, setShow }: any) {
         }
 
         return (
-          <div className="w-100 hover:bg-gray-100">
+          <div className="w-100 p-3 border-t-gray-200 border-y-2 border-b-0">
           <Link
             className="rounded font-light"
             key={useId()}
