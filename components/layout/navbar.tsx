@@ -40,7 +40,7 @@ const _routes = {
 
 function DynamicSidebarRoutingBuilder({ routing, setShow }: any) {
   return (
-    <nav className="flex flex-col" key={useId()}>
+    <nav className="flex flex-col mt-3" key={useId()}>
       {(routing.items || []).map((m: any) => {
 
         const [open, setOpen] = useState<boolean>(false);
