@@ -16,35 +16,26 @@ type props = {
 const routesMap = {
   items: [
     {
-      name: "Financeiro",
-      items: [
+      "name": "A",
+      "items": [
         {
-          "name": "teste"
+          "name": "b",
+          "items": [
+            
+          ]
         }
       ]
-    },
-    {
-      name: "Financeiro",
-    },
-    {
-      name: "Financeiro",
-    },
-    {
-      name: "Financeiro",
-    },
-    {
-      name: "Financeiro",
     }
-  ],
-};
+  ]
+}
 
 
-function DynamicSidebarRoutingBuilder({ setShow }: any) {
+function DynamicSidebarRoutingBuilder({ setShow, routes }: any) {
   return (
     <nav className="flex flex-col mt-3" key={useId()}>
-      {(routesMap.items || []).map((m: any) => {
+      {(routes.items || []).map((m: any) => {
         const [open, setOpen] = useState<boolean>(false);
-
+        console.log(m)
         if ((m.items || []).length) {
           return (
             <Collapsible
@@ -64,7 +55,7 @@ function DynamicSidebarRoutingBuilder({ setShow }: any) {
               onTriggerOpening={() => setOpen(true)}
               onTriggerClosing={() => setOpen(false)}
             >
-              <DynamicSidebarRoutingBuilder routing={m} setShow={setShow} />
+              <DynamicSidebarRoutingBuilder routes={m} setShow={setShow} />
             </Collapsible>
           );
         }
@@ -93,7 +84,7 @@ export function Navbar({ setShow }: props) {
         <div className="flex justify-center">
           <b className="mt-3">Dashboard</b>
         </div>
-        <DynamicSidebarRoutingBuilder setShow={setShow} />
+        <DynamicSidebarRoutingBuilder routes={routesMap} setShow={setShow} />
       </div>
       <div
         className="w-4/5 h-full bg-gray-500 bg-opacity-30 backdrop-filter"
