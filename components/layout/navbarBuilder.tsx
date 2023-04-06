@@ -1,8 +1,9 @@
+/* eslint-disable */
 'use client';
 
 import Link from "next/link";
 import { useId, useState } from "react";
-import Collapsible, { CollapsibleProps } from "react-collapsible";
+import Collapsible from "react-collapsible";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
