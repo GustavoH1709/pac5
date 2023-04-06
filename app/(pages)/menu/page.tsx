@@ -1,5 +1,5 @@
 
-export default function About() {
+export default function Menu() {
     return (
         <b>Menu Page</b>
     )
