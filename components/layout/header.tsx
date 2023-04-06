@@ -5,7 +5,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 export function Header() {
   const [show, setShow] = useState<boolean>(false);
 

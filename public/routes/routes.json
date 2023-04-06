@@ -1,0 +1,30 @@
+{
+    "items": [
+        {
+            "name": "Financeiro",
+            "items": [
+                {
+                    "name": "Impostos",
+                    "items": [
+                        {
+                            "name": "Impostos",
+                            "items": [
+                                {
+                                    "name": "Impostos"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Estoque",
+            "items": [
+                {
+                    "name": "Produto"
+                }
+            ]
+        }
+    ]
+}
