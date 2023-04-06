@@ -39,7 +39,7 @@ export function NavBarBuilder({ setShow, routes }: any) {
         }
 
         return (
-          <div className="w-100 p-3 border-y-2 border-t-gray-200 border-b-0 hover:bg-gray-300">
+          <div className="w-100 p-3 border-y-2 border-t-gray-200 border-b-0 hover:bg-gray-300" key={useId()}>
             <Link
               className="rounded font-light"
               key={useId()}
