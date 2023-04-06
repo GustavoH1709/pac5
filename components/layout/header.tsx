@@ -1,19 +1,13 @@
-'use client'
+"use client";
 
 import { Navbar } from "./navbar";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-type props = {
-    routes: string[]
-}
 
-export function Header({ routes } : props) {
-
+export function Header() {
   const [show, setShow] = useState<boolean>(false);
-
-  console.log('header =>', routes)
 
   return (
     <>
@@ -22,7 +16,7 @@ export function Header({ routes } : props) {
           <FontAwesomeIcon icon={faBars} />
         </button>
       </div>
-      {show && <Navbar setShow={setShow} routes={routes}/>}
+      {show && <Navbar setShow={setShow} />}
     </>
   );
 }
