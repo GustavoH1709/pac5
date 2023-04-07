@@ -10,7 +10,7 @@ export function Header() {
 
   return (
     <>
-      <div className="flex items-center w-full h-16 fixed inset-x-0 top-0 bg-blue-300 justify-between">
+      <div className="absolute flex items-center w-full h-16 inset-x-0 top-0 bg-blue-300 justify-between">
         <button onClick={() => setShow(!show)} className="appearance-none p-9">
           <FontAwesomeIcon icon={faBars} />
         </button>
