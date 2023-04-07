@@ -17,6 +17,8 @@ export function TextInput({
         id={label}
         value={value}
         onChange={onChange}
+        placeholder={placeholder || label}
+        disabled={disabled}
       />
       {invalid && <p className="text-red-600">{invalid}</p>}
     </>

@@ -1,8 +1,8 @@
 "use client";
 
 import { useFormik } from "formik";
-import { TextInput } from "../../../components/inputs/TextInput";
-import { ButtonForm } from "../../../components/form/ButtonForm";
+import { TextInput } from "../../components/inputs/TextInput";
+import { ButtonForm } from "../../components/form/ButtonForm";
 import z from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,7 +22,7 @@ export default function Login() {
     },
     enableReinitialize: true,
     onSubmit: () => {
-      router.push("/");
+      router.push("/menu");
     },
     validationSchema: toFormikValidationSchema(validationSchema),
   });
