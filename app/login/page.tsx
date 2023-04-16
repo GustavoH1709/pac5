@@ -34,7 +34,7 @@ export default function Login() {
     <div className="flex items-center justify-center h-screen">
       <div className="bg-gray-200 p-6 rounded-lg">
         <form className="container flex flex-wrap flex-row">
-          <div className="lg:w-full">
+          <div className="lg:w-full pr-1 pl-1">
             <TextInput
               value={formik.values.email}
               label="E-mail"
@@ -44,7 +44,7 @@ export default function Login() {
               invalid={formik.errors.email}
             />
           </div>
-          <div className="lg:w-full">
+          <div className="lg:w-full pr-1 pl-1">
             <TextInput
               value={formik.values.password}
               label="Senha"
@@ -54,7 +54,7 @@ export default function Login() {
               invalid={formik.errors.password}
             />
           </div>
-          <div className="lg:w-full mt-2">
+          <div className="lg:w-full pt-3 pr-1 pl-1">
             <ButtonForm type="button" onClick={formik.handleSubmit}>
               <FontAwesomeIcon
                 size="1x"

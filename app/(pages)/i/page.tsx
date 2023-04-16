@@ -1,8 +1,6 @@
-import { Card, CardHeader } from '../../../components/layout'
+import { ICard } from './card';
 
 export default function I() {
 
-    return (<Card>
-        <CardHeader title={'TESTE'} actions={[1, 2, 3]}/>
-    </Card>)
+    return (<ICard/>)
 }
