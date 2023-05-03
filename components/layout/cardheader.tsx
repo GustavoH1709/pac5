@@ -4,7 +4,7 @@ import { ToolbarCrud } from "./toolbarCrud";
 type buttonProps = {
   label: string;
   action: undefined | MouseEventHandler<HTMLButtonElement>;
-  color: string | undefined;
+  color?: string | undefined;
 };
 
 type props = {

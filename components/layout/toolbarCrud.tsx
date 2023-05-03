@@ -1,9 +1,9 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useId } from "react";
 
 type buttonProps = {
   label: string;
   action: undefined | MouseEventHandler<HTMLButtonElement>;
-  color: string | undefined;
+  color?: string | undefined;
 };
 
 type props = {
@@ -16,9 +16,10 @@ export function ToolbarCrud({ actions }: props) {
       {(actions || []).map((m) => {
         return (
           <button
+            key={useId()}
             type="button"
-            className={`rounded-md p-2 ${m.color ?? "bg-blue-600"}`}
-            //onClick={m.action}
+            className={`text-white rounded-md p-2 ${m.color ?? "bg-blue-600 hover:bg-blue-500"}`}
+            onClick={m.action}
           >
             {m.label}
           </button>

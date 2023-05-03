@@ -3,8 +3,11 @@ import { Card, CardHeader, CardBody } from '../../../components/layout'
 const actions = [
     {
         label: 'Novo',
-        action: () => alert('Novo'),
-        color: 'bg-blue-600'
+        action: () => console.log('novo')
+    },
+    {
+        label: 'Busca',
+        action: () => console.log('busca')
     }
 ]
 
