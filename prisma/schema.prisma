@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+  IdUsu Int @id @default(autoincrement())
+  Nome String
+  Email String
+  Password String
+  relfina Relfina[]
+}
+
+model DataCompYear {
+  IdData Int @id @default(autoincrement())
+  Id_Rel Relfina @relation(fields: [IdRel], references: [IdRel])
+  IdRel Int
+  Ano Int?
+  Availability Float?
+  DupToReceive Float?
+  Stock Float?
+  Loan Float?
+  Wage Float?
+  Tax Float?
+  ShareCapital Float?
+  ProfitReserve Float?
+  AccumulatedProfit Float?
+  GrossSales Float?
+  Deductions Float?
+  CPV Float?
+  OperatingExpenses Float?
+  FinancialExpenses Float?
+  IRCS Float?
+}
+
+model Relfina {
+  IdRel Int @id @default(autoincrement())
+  user Usuario @relation(fields: [IdUsu], references: [IdUsu])
+  IdUsu Int
+  datacompyear DataCompYear[]
+}
+
+
