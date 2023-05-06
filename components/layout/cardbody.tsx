@@ -5,5 +5,5 @@ type props = {
 };
 
 export function CardBody({ children }: props) {
-  return <div className="flex">{children}</div>;
+  return <div className="w-full">{children}</div>;
 }

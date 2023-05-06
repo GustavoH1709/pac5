@@ -1,9 +1,12 @@
+import { type } from "os";
 import { MouseEventHandler, useId } from "react";
 
 type buttonProps = {
+  type: '',
   label: string;
   action: undefined | MouseEventHandler<HTMLButtonElement>;
   color?: string | undefined;
+  icon?: ''
 };
 
 type props = {

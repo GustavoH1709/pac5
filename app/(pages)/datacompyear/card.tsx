@@ -1,4 +1,5 @@
 import { Card, CardHeader, CardBody } from '../../../components/layout'
+import { DataCompYearTable } from './table/DataCompYearTable';
 
 const actions = [
     {
@@ -12,13 +13,12 @@ const actions = [
 ]
 
 
-export function ICard() {
+export function DataCompYearCard() {
     return (
         <Card>
             <CardHeader title='Teste' actions={actions}/>
             <CardBody>
-                <div></div>
-                <div></div>
+                <DataCompYearTable/>
             </CardBody>
         </Card>
     )
