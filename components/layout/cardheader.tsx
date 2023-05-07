@@ -1,16 +1,7 @@
 import { MouseEventHandler } from "react";
 import { ToolbarCrud } from "./toolbarCrud";
+import type { props } from './types/cardtypes';
 
-type buttonProps = {
-  label: string;
-  action: undefined | MouseEventHandler<HTMLButtonElement>;
-  color?: string | undefined;
-};
-
-type props = {
-  actions: buttonProps[] | undefined;
-  title: string;
-};
 
 export function CardHeader({ title, actions }: props) {
   return (

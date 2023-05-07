@@ -1,3 +1,6 @@
+import type { TextInputTypes } from './types';
+
+
 export function TextInput({
   disabled = false,
   label = "",
@@ -5,7 +8,7 @@ export function TextInput({
   onChange = (e: any) => {},
   invalid = "",
   value = "",
-}) {
+} : TextInputTypes) {
   return (
     <>
       <label className="block text-gray-700 font-bold mb-2" htmlFor={label}>

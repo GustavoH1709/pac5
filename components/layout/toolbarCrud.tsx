@@ -1,19 +1,8 @@
-import { type } from "os";
-import { MouseEventHandler, useId } from "react";
+import { useId } from "react";
+import type { buttonProps } from './types/cardtypes';
 
-type buttonProps = {
-  type: '',
-  label: string;
-  action: undefined | MouseEventHandler<HTMLButtonElement>;
-  color?: string | undefined;
-  icon?: ''
-};
 
-type props = {
-  actions: buttonProps[] | undefined;
-};
-
-export function ToolbarCrud({ actions }: props) {
+export function ToolbarCrud({ actions }: { actions : buttonProps[] | undefined}) {
   return (
     <div role="group" className="flex gap-4">
       {(actions || []).map((m) => {
@@ -22,7 +11,7 @@ export function ToolbarCrud({ actions }: props) {
             key={useId()}
             type="button"
             className={`text-white rounded-md p-2 ${m.color ?? "bg-blue-600 hover:bg-blue-500"}`}
-            onClick={m.action}
+            onClick={m.action as never}
           >
             {m.label}
           </button>
