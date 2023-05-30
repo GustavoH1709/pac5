@@ -38,8 +38,8 @@ export default function Login() {
             <TextInput
               value={formik.values.email}
               label="E-mail"
-              onChange={(e) => {
-                formik.setFieldValue("email", e.target.value);
+              onChange={(e: React.FormEvent<HTMLInputElement>) => {
+                formik.setFieldValue("email", e.currentTarget.value);
               }}
               invalid={formik.errors.email}
             />
@@ -48,8 +48,8 @@ export default function Login() {
             <TextInput
               value={formik.values.password}
               label="Senha"
-              onChange={(e) => {
-                formik.setFieldValue("password", e.target.value);
+              onChange={(e: React.FormEvent<HTMLInputElement>) => {
+                formik.setFieldValue("password", e.currentTarget.value);
               }}
               invalid={formik.errors.password}
             />
