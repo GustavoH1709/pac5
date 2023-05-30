@@ -15,7 +15,7 @@ export function DataCompYearForm({
 }: {
   initialValues: DataCompYearFormType;
   tipo: string;
-  onSave: any;
+  onSave: any | null;
 }) {
   const validationSchema = z.object({
     Ano: z.number({ required_error: "Obrigatório" }),

@@ -36,6 +36,6 @@ export default function DataCompYearNewEditPage({ params }: { params: { IdData: 
 
   return (
     
-    <DataCompYearForm initialValues={initialValues} tipo={params.type}/>
+    <DataCompYearForm initialValues={initialValues} tipo={params.type} onSave={null}/>
   );
 }
