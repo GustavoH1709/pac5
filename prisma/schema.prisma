@@ -19,24 +19,11 @@ model Usuario {
 
 model DataCompYear {
   IdData Int @id @default(autoincrement())
-  Id_Rel Relfina @relation(fields: [IdRel], references: [IdRel])
-  IdRel Int
   Ano Int?
-  Availability Float?
-  DupToReceive Float?
-  Stock Float?
-  Loan Float?
-  Wage Float?
-  Tax Float?
-  ShareCapital Float?
-  ProfitReserve Float?
-  AccumulatedProfit Float?
-  GrossSales Float?
-  Deductions Float?
-  CPV Float?
-  OperatingExpenses Float?
-  FinancialExpenses Float?
-  IRCS Float?
+  Disponibilidades String?
+  DuplicatasAReceber String?
+  Estoques String?
+  AtivoCirculante String?
 }
 
 model Relfina {
@@ -45,5 +32,3 @@ model Relfina {
   IdUsu Int
   datacompyear DataCompYear[]
 }
-
-
