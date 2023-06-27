@@ -30,5 +30,5 @@ model Relfina {
   IdRel Int @id @default(autoincrement())
   user Usuario @relation(fields: [IdUsu], references: [IdUsu])
   IdUsu Int
-  datacompyear DataCompYear[]
+  //datacompyear DataCompYear[]
 }

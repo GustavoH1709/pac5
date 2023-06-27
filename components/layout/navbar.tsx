@@ -9,7 +9,7 @@ type props = {
 
 export function Navbar({ setShow }: props) {
   return (
-    <div className="absolute w-full h-full flex row">
+    <div className="absolute w-full h-full flex row" style={{zIndex: 99999}}>
       <div className="w-1/5 h-full bg-white">
         <div className="flex justify-center">
           <b className="mt-3 mb-3">Dashboard</b>
