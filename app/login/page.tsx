@@ -8,6 +8,10 @@ import { toFormikValidationSchema } from "zod-formik-adapter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/navigation";
+import { Post } from '../api/auth/login/route'
+import { redirect } from "next/dist/server/api-utils";
+
+export const dynamic = 'force-dynamic';
 
 export default function Login() {
   const validationSchema = z.object({
@@ -21,13 +25,23 @@ export default function Login() {
       password: "",
     },
     enableReinitialize: true,
-    onSubmit: () => {
-      router.push("/menu");
+    onSubmit: (_values) => {
+      login(_values)
     },
     validationSchema: toFormikValidationSchema(validationSchema),
   });
 
-  const router = useRouter();
+  const login = (_values : { password: string; email: string;})=> {
+    if(!_values.email || !_values.password) {
+      return;
+    }
+
+    fetch('localhost:3000/api/auth/login', { method: 'POST', body: _values as any }).then(
+      response => {
+        console.log(response)
+      }
+    )
+  }
 
   return (
     <main>

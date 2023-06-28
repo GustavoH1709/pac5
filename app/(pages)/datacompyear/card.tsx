@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardBody } from "../../../components/layout";
 import { DataCompYearTable } from "./table/DataCompYearTable";
 import { DataCompYearTablePermanent } from "./table/DataCompYearTablePermanent";
+import { DataCompYearPassivo } from './table/DataCompYearPassivo';
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -64,7 +65,7 @@ export function DataCompYearCard() {
           <DataCompYearTablePermanent />
         </TabPanel>
         <TabPanel value={tab} index={2}>
-          
+          <DataCompYearPassivo/>
         </TabPanel>
       </CardBody>
     </Card>
