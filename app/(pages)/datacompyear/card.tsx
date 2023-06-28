@@ -55,7 +55,7 @@ export function DataCompYearCard() {
           >
             <Tab label="Balanço patrimonial Ativo Circulante" {...a11yProps(0)} />
             <Tab label="Balanço patrimonial" {...a11yProps(1)} />
-            <Tab label="Balanço patrimonial" {...a11yProps(2)} />
+            <Tab label="Balanço Passivo" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={tab} index={0}>
