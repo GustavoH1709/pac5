@@ -5,9 +5,9 @@ import { useEffect } from 'react';
 
 export default function Home() {
 
-  const login = localStorage.getItem('login');
-
   useEffect(() => {
+    const login = localStorage.getItem('login');
+
     if(login) {
       redirect('/menu')
     } else {
